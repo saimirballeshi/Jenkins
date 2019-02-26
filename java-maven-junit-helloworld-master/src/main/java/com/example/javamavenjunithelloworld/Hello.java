@@ -19,7 +19,7 @@ public class Hello {
      * @throws IllegalArgumentException Thrown when times is larger 
      * than 20 or a negative number.
      */
-    public void setTimes(int times) {
+    public void setTimes(final int times) {
         if (times < 0 || times > MAXIMUM_AMOUNT_OF_TIMES) {
             throw new IllegalArgumentException("Parameter «times» should be a "
             		+ "positive integer no larger than "
@@ -33,7 +33,7 @@ public class Hello {
      *
      * @param printer PrintStream to write output to.
      */
-    public void sayHello(PrintStream printer) {
+    public void sayHello(final PrintStream printer) {
         for (short i = 0; i < times; i++) {
             printer.println(HELLO);
         }
